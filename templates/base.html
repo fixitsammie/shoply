@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Shoply{% endblock %}</title>
+    <meta name="description" content="{% block description %}Shoply — everyday essentials, delivered with care.{% endblock %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f3f6fb',
+                            100: '#e2e9f6',
+                            200: '#c3d1ea',
+                            300: '#96afd8',
+                            400: '#6386c1',
+                            500: '#4067a8',
+                            600: '#2f508a',
+                            700: '#284270',
+                            800: '#24395d',
+                            900: '#22324f',
+                            950: '#151f34',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-white font-sans text-slate-900 antialiased">
+    {% block content %}{% endblock %}
+</body>
+</html>
